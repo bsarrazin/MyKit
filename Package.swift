@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "MyKit",
+    platforms: [.iOS(.v13)],
     products: [
         .library(
             name: "Foo",
@@ -13,6 +14,10 @@ let package = Package(
             name: "Bar",
             targets: ["Bar"]
         ),
+        .library(
+            name: "Maui",
+            targets: ["Maui"]
+        )
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -35,5 +40,6 @@ let package = Package(
             name: "BarTests",
             dependencies: ["Bar"]
         ),
+        .target(name: "Maui")
     ]
 )
