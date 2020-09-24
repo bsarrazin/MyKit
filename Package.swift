@@ -41,11 +41,7 @@ let package = Package(
             dependencies: ["Bar"]
         ),
         .target(
-            name: "Maui",
-            resources: [
-                .process("MyViewController.xib"),
-                .process("Media.xcassets"),
-            ]
+            name: "Maui"
         )
     ]
 )
